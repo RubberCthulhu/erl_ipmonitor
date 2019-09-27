@@ -1,0 +1,16 @@
+{application, ipmonitor,
+ [{description, "IP address monitor"},
+  {vsn, "1.0"},
+  {modules, [ipmonitor_app,
+             ipmonitor_sup,
+             ipmonitor_name,
+             ipmonitor_monitor_sup,
+             ipmonitor]},
+  {registered, [ipmonitor_sup, ipmonitor_name, ipmonitor_monitor_sup]},
+  {applications, [kernel,
+                  stdlib]},
+  {mod, {ipmonitor_app, []}},
+  {env, []}
+ ]}.
+
+
